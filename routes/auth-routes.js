@@ -52,24 +52,6 @@ authRoutes.post('/signup', (req, res, next)=>{
     });
   });
 });
-
-
-//    User.create({username:username, password: hashPass,})
-//    .then((theUser)=>{
-//      res.redirect('/')
-//    })
-//    .catch((err)=>{
-//      console.log(err);
-//      next(err);
-//    })
-
-//  })//end the .then function for user.findOne query
-//    .catch((err)=>{
-//      console.log(err);
-//      next(err);
-//    })
-//  });//end post /signup route
-
 //END SIGNUP ROUTES
 
 
@@ -87,43 +69,22 @@ authRoutes.post("/login", passport.authenticate("local", {
   passReqToCallback: true
 }));
 
-//ERROR CHECKING
-//   if (username === "" || password === "") {
-//     res.render("auth/login", {
-//       errorMessage: "Indicate a username and a password to sign up"
-//     });
-//     return;
-//   }
-
-//   User.findOne({ "username": username }, (err, user) => {
-//       if (err || !user) {
-//         res.render("auth/login", {
-//           errorMessage: "The username doesn't exist"
-//         });
-//         return;
-//       }
-//       if (bcrypt.compareSync(password, user.password)) {
-//         // Save the login in the session!
-//         req.session.currentUser = user;
-//         res.redirect("/");
-//       } else {
-//         res.render("auth/login", {
-//           errorMessage: "Incorrect password"
-//         });
-//       }
-//   });
-
-
 authRoutes.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/login");
 });
 
-authRoutes.get("/secret", ensureLogin.ensureLoggedIn(), (req, res) => {
+
+authRoutes.get("/secret", ensureAuthenticated, (req, res) => {
   res.render("secret", { user: req.user });
 });
-
-
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  } else {
+    res.redirect('/login')
+  }
+}
 
 
 module.exports = authRoutes;

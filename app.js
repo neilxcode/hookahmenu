@@ -15,17 +15,20 @@ const passport     = require("passport");
 const LocalStrategy= require("passport-local").Strategy;
 const flash        = require("connect-flash");
 
+const Blend= require("./models/blendSchema");
 const User = require("./models/userSchema");
 
+const mongoDB = 'mongodb://localhost/hookahmenu';
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/hookahmenu', {useMongoClient: true})
+  .connect(mongoDB, {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
     console.error('Error connecting to mongo', err)
   });
+
 
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
@@ -58,7 +61,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
 
 
 // default value for title local
@@ -95,6 +97,7 @@ passport.use(new LocalStrategy({
   });
 }));
 
+
 //PASSPORT MIDDLEWARE
 app.use(passport.initialize());
 app.use(passport.session());
@@ -107,8 +110,13 @@ app.use('/', authRoutes);
 const siteRoutes = require('./routes/site-routes');
 app.use('/', siteRoutes);
 
+const blendRoutes = require('./routes/blend-routes');
+app.use('/', blendRoutes);
+
 const index = require('./routes/index');
 app.use('/', index);
+
+
 
 
 module.exports = app;

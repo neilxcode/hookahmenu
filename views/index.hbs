@@ -2,7 +2,14 @@
 <p>Welcome to {{title}}</p>--}}
 <!-- HTML Codes by Quackit.com -->
 
-
+<div class="container">
+        <div class="topnav" id="myTopnav">
+            <a href="/" class="active">Home</a>
+            <a href="/blends">Blends</a>
+            <a href="#events">Events</a>
+            <a href="javascript:void(0);" class="icon">&#9776;</a>
+        </div>
+    </div>
 
 <div class="panel panel-primary" id="result_panel">
     <div class="panel-heading"><h3 class="panel-title">Top Blends</h3>
@@ -10,35 +17,12 @@
 
 
     <div class="panel-body">
+        
         <ul class="list-group">
-            <li class="list-group-item"><strong>FLAVOR!</strong>
+            {{#each infoFromDb}}
+            <li class="list-group-item"><strong>{{this.names}}</strong>
             </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
-            <li class="list-group-item"><strong>FLAVOR!</strong>
-            </li>
+            {{/each}}
         </ul>
     </div>
 </div>
