@@ -50,15 +50,16 @@ div.container h1 {
 /*TOPNAV*/
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #3b7f46;
+    background-color: darkred;;
     overflow: hidden;
+    text-align: center;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
+    // float: left;
+    display: inline-block;
+    color: #FFFF99;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -73,7 +74,6 @@ div.container h1 {
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: #4CAF50;
     color: white;
 }
 
@@ -111,7 +111,13 @@ div.container h1 {
 .panel-heading {
   text-align: center;
   padding: 5%;
-  color: #d1b272;
+  color: #FFFF99;
+  font-family: Cursive;
+  text-shadow: #EEEE00 0 0 10px;
+}
+.panel-heading h3 {
+  font-size: 50px;
+  text-shadow: #EEEE00 0 0 10px;
 }
 
 
@@ -126,9 +132,12 @@ div.container h1 {
     text-align: center;
     display: block;
 }
+.list-group a{
+  color:#FFFF99;
+}
 
 .list-group li{
-  background-color: #3b7f46;
+  background: linear-gradient(darkred, yellow);
   color: white;
 }
 
@@ -136,6 +145,10 @@ div.container h1 {
   background-color: #3b7f46;
   background-color: #ddd;
   color: black;
+}
+
+.group {
+  color: #FFFF99;
 }
 
 //SIGNUP FORM
@@ -204,10 +217,6 @@ div.container h1 {
     height: 100px;
     background-color: #d1b272;
     float: left;
-}
-
-.likeButton {
-  float: right;
 }
 
 .details{
