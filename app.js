@@ -21,7 +21,7 @@ const User = require("./models/userSchema");
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/hookahmenu', {useMongoClient: true})
+  .connect(process.env.DATABASE_URL, {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
