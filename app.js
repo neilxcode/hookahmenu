@@ -112,8 +112,8 @@ app.use('/', siteRoutes);
 const blendRoutes = require('./routes/blend-routes');
 app.use('/', blendRoutes);
 
-const index = require('./routes/index');
-app.use('/', index);
+// const index = require('./routes/index');
+// app.use('/', index);
 
 
 
