@@ -16,8 +16,6 @@
 <div class="panel panel-primary" id="result_panel">
     <div class="panel-heading"><h3 class="panel-title">Top Blends</h3>
     </div>
-
-    <div class="panel-body">
         
         <ul class="list-group">
             {{#each infoFromDb}}
@@ -27,7 +25,7 @@
                     {{!--<form class="likeButton" type="submit" method="POST">Like</form>--}}
 
                     <form action="/index/{{this._id}}" method="POST">
-                        <div>
+                        <div class="group">
                             <label for="liked">LIKE</label>
                             <input type="hidden" name="liked" value="{{this.likes}}">
                             <button type="submit"  id="likeBlend" ></button>

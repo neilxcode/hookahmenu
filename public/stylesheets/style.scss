@@ -1,7 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("https://static.brusheezy.com/system/resources/previews/000/042/595/original/rainbow-smoke-texture-photoshop-textures.jpg");
+  background: url("/images/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -17,31 +19,10 @@ div.container h1 {
   font-size: 90px;
   font-style: normal;
   font-weight: bold;
-  color: #d1b272;
+  color: darkred;
   background-color: none;
   text-shadow: #EEEE00 0 0 10px; }
 
-
-//   .topButtons {
-//     text-align: center;
-//     padding: 5%;
-//   }
-
-//   .button {
-//     background-color: #4CAF50; /* Green */
-//     border: none;
-//     color: white;
-//     padding: 10px 24px;
-//     text-align: center;
-//     text-decoration: none;
-//     display: inline-block;
-//     font-size: 16px;
-// }
-
-//   .button:hover {
-//     background-color: #ddd;
-//     color: black;
-// }
 
 
 .authContainer {
@@ -49,20 +30,20 @@ div.container h1 {
     padding: 5%;
 }
   .button {
-    background-color: #4CAF50; /* Green */
+    background-color: darkred; /* Green */
     border: none;
-    color: white;
+    color: #FFFF99;
     padding: 10px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    box-shadow: #EEEE00 0 0 10px;
 }
   .button:hover {
     background-color: #ddd;
     color: black;
 }
-
 
 
 
