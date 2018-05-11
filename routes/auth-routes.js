@@ -43,14 +43,18 @@ authRoutes.post('/signup', (req, res, next)=>{
 
 
    const newUser = User({
-      username,
+      username: username,
       password: hashPass
     });
 
     newUser.save((err) => {
+    if (err) {
+        res.render("auth/signup", { message: "Something went wrong" });
+      } else {
       res.redirect("/");
-    });
+    }
   });
+});
 });
 //END SIGNUP ROUTES
 
@@ -75,9 +79,6 @@ authRoutes.get("/logout", (req, res) => {
 });
 
 
-authRoutes.get("/secret", ensureAuthenticated, (req, res) => {
-  res.render("secret", { user: req.user });
-});
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
@@ -85,6 +86,9 @@ function ensureAuthenticated(req, res, next) {
     res.redirect('/login')
   }
 }
+authRoutes.get("/secret", ensureAuthenticated, (req, res) => {
+  res.render("secret", { user: req.user });
+});
 
 
 module.exports = authRoutes;

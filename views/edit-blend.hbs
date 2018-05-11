@@ -1,0 +1,15 @@
+<form action="/blends/{{blend._id}}" method="post">
+    <label for="">Name:</label>
+    <input type="text" name="editedName" id="" value="{{blend.names}}">
+    <br>
+    <label for="">Description:</label>
+    <textarea name="editedDescription" id="" cols="30" rows="3">{{blend.description}}</textarea>
+    <br>
+    <label for="">Brand:</label>
+    <input type="text" name="editedBrand" id="" value="{{blend.brand}}">
+    <br>
+    <label for="">Strength:</label>
+    <input type="text" name="editedStrength" id="" value="{{blend.strength}}">
+    <br>
+    <button type="submit"> Save changes</button>
+</form>

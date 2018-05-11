@@ -18,11 +18,10 @@ const flash        = require("connect-flash");
 const Blend= require("./models/blendSchema");
 const User = require("./models/userSchema");
 
-const mongoDB = 'mongodb://localhost/hookahmenu';
 
 mongoose.Promise = Promise;
 mongoose
-  .connect(mongoDB, {useMongoClient: true})
+  .connect('mongodb://localhost/hookahmenu', {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
@@ -115,6 +114,7 @@ app.use('/', blendRoutes);
 
 const index = require('./routes/index');
 app.use('/', index);
+
 
 
 

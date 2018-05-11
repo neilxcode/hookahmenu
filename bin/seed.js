@@ -31,66 +31,88 @@ const users = [
       names: "Apple Americano",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Black Grape",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Blue Mist",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Blue Surfer",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Candy",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Caramel Macchiato",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Christmas Mix",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Coco Jumbo",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Code 69",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Flower Power",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strenth: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
     },
     {
       names: "Fruit Sensation",
       description: "a nice flavor",
       brand: "Starbuzz",
+      strength: "1",
+      likes: "1",
       timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
       },
   ]

@@ -1,0 +1,12 @@
+<div class="details">
+    <h2>{{oneBlend.names}}</h2>
+    <p>{{oneBlend.description}}</p>
+    <p>{{oneBlend.brand}}</p>
+    <p>{{oneBlend.strength}}</p>
+    <p>{{oneBlend.likes}}</p>
+</div>
+<br>
+<a href="/blends/{{oneBlend._id}}/edit">Edit</a>
+<form action="/blends/{{oneBlend._id}}/delete" method="post">
+    <button type="submit">DELETE</button>
+</form>

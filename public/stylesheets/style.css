@@ -1,21 +1,24 @@
+@charset "UTF-8";
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("https://static.brusheezy.com/system/resources/previews/000/042/595/original/rainbow-smoke-texture-photoshop-textures.jpg"); }
 
 a {
   color: #00B7FF; }
 
 div.container {
-  background-color: #ffffff; }
+  background-color: none; }
 
 div.container h1 {
   text-align: center;
   font-family: Cursive;
-  font-size: 80px;
+  font-size: 90px;
   font-style: normal;
   font-weight: bold;
   color: #d1b272;
-  background-color: #ffffff; }
+  background-color: none;
+  text-shadow: #EEEE00 0 0 10px; }
 
 .authContainer {
   text-align: center;
@@ -151,5 +154,29 @@ div.container h1 {
 
 .blendsTitle {
   text-align: center; }
+
+.blendsContainer {
+  width: 80%;
+  padding: 5%;
+  margin: 0 auto; }
+
+.blendsUL ul {
+  padding: 0;
+  /* remove default padding and all margins! */
+  margin: 0;
+  list-style-type: none;
+  /* remove the • */ }
+
+.blendsContainer ul li {
+  width: 25%;
+  height: 100px;
+  background-color: #d1b272;
+  float: left; }
+
+.likeButton {
+  float: right; }
+
+.details {
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

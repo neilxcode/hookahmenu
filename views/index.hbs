@@ -2,11 +2,13 @@
 <p>Welcome to {{title}}</p>--}}
 <!-- HTML Codes by Quackit.com -->
 
+
 <div class="container">
         <div class="topnav" id="myTopnav">
             <a href="/" class="active">Home</a>
             <a href="/blends">Blends</a>
-            <a href="#events">Events</a>
+            <a href="/newBlend">New Blend</a>
+            <a href="/hookahs">Hookahs</a>
             <a href="javascript:void(0);" class="icon">&#9776;</a>
         </div>
     </div>
@@ -15,14 +17,25 @@
     <div class="panel-heading"><h3 class="panel-title">Top Blends</h3>
     </div>
 
-
     <div class="panel-body">
         
         <ul class="list-group">
             {{#each infoFromDb}}
-            <li class="list-group-item"><strong>{{this.names}}</strong>
-            </li>
+                <li class="list-group-item">
+                    <strong> <a href="/index/{{this._id}}">{{this.names}}</a></strong>
+                    {{this.likes}}
+                    {{!--<form class="likeButton" type="submit" method="POST">Like</form>--}}
+
+                    <form action="/index/{{this._id}}" method="POST">
+                        <div>
+                            <label for="liked">LIKE</label>
+                            <input type="hidden" name="liked" value="{{this.likes}}">
+                            <button type="submit"  id="likeBlend" ></button>
+                        </div>
+                    </form>
+                    </li> 
             {{/each}}
         </ul>
+
     </div>
 </div>
