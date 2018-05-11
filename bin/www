@@ -39,6 +39,6 @@ server.on('error', error => {
   }
 });
 
-server.listen(process.env.PORT || 8000, () => {
+server.listen(process.env.PORT || 4000, () => {
   console.log(`Listening on http://localhost:${process.env.PORT}`);
 });
