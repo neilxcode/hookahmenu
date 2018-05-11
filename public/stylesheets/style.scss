@@ -137,7 +137,7 @@ div.container h1 {
 }
 
 .list-group li{
-  background: linear-gradient(darkred, yellow);
+  background: linear-gradient(darkred, red);
   color: white;
 }
 
@@ -194,6 +194,19 @@ div.container h1 {
   background: #fff;
   color: #43a3e6;
   transition: .3s ease background;
+}
+
+#form #nameLabel {
+  color:#FFFF99;
+}
+
+#form #passLabel {
+  color:#FFFF99;
+}
+
+#form #submitButton {
+  color:#FFFF99;
+  background: linear-gradient(darkred, red);
 }
 
 //BLENDS PAGE
